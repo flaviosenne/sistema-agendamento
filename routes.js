@@ -66,4 +66,19 @@ routes.get('/list', async (req, res) =>{
  res.render('list', {data})
 })
 
+routes.get('/search', async (req, res) => {
+    var datas = await appointment.Search(req.query.search)
+    res.render('list', {data: datas})
+})
+
+// 5 minutos
+var poolTime =  1000 * 60 * 5
+setInterval(async () => {
+    
+    await appointment.SendNotification()
+
+
+
+}, poolTime) 
+
 module.exports = routes

@@ -10,15 +10,17 @@
     
 </head>
 <body>
+    <a href='/'type="button" class="btn btn-outline-primary"> Voltar </a>
     <h2 class="display-1">  Agendamentos Finalizados</h2>
     <hr>
-    <form action="" method="POST">
-        <div style="display: flex; justify-content: space-around; margin: 5px">
-
-            <input class="input-group"type="search" name="search" id="search" placeholder="Digite o email ou CPF">
-            <button class="btn btn-info"> Pesquisar </button>
-        </div>
-    </form>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <form class="d-flex" action="/search" method="GET">
+                <input class="form-control me-2" type="search" name="search" id="search"aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </nav>
     <table class="table">
         <thead>
           <tr>
